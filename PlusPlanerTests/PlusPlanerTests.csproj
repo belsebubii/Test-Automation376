@@ -6,10 +6,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{123A9112-85E6-41A5-99B2-A64905E8BBAF}</ProjectGuid>
+    <ProjectGuid>{F5F7AFC1-1C39-4291-B6D8-968789C38D75}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SeleniumFirst</RootNamespace>
-    <AssemblyName>SeleniumFirst</AssemblyName>
+    <RootNamespace>PlusPlanerTests</RootNamespace>
+    <AssemblyName>PlusPlanerTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -57,8 +57,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EAPageObject.cs" />
-    <Compile Include="LoginPageObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,7 +21,7 @@ namespace SeleniumFirst
     class Program
     {
         //create a reference for the browser
-       
+
 
 
         static void Main(string[] args)
@@ -34,7 +34,7 @@ namespace SeleniumFirst
             PropertiesCollection.driver = new ChromeDriver();
 
             //navigate to Webpage
-            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/Login.html");
             Console.WriteLine("Opened URL");
         }
 
@@ -52,31 +52,43 @@ namespace SeleniumFirst
         [Test]
         public void Test_2()
         {
-            //Title
-            SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertyType.Id);
 
-            //Initial
-            SeleniumSetMethods.EnterText("Initial", "namename", PropertyType.Name);
+            ////// Iz nekog razloga ovaj cijeli dio ne radi? Za PageFactory, dio koda korišten u tutorialu, Visual Studio tvrdi da je obsolete.
+            ////Login to Application
+            //LoginPageObject pageLogin = new LoginPageObject;
+            //EAPageObject pageEA = pageLogin.Login("username", "password");
 
-            Console.WriteLine("Title value is: " + SeleniumGetMethods.GetTextFromDDL("TitleId",PropertyType.Id));
-            Console.WriteLine("Initial value is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
+            //pageEA.FillUserForm("WJ", "Watson", "John");
 
-            //First name
-            SeleniumSetMethods.EnterText("FirstName", "John", PropertyType.Name);
-
-            //Middle name
-            SeleniumSetMethods.EnterText("MiddleName", "Smith", PropertyType.Name);
-
-            //Gender
-            SeleniumSetMethods.Click("Male", PropertyType.Name);
-
-            //Languages known
-            SeleniumSetMethods.Click("english", PropertyType.Name); //unchecks
-            SeleniumSetMethods.Click("Hindi", PropertyType.Name);
+            //////Initialize the page by calling reference
+            //EAPageObject page = new EAPageObject(); 
 
 
-            //Save
-            SeleniumSetMethods.Click("Save", PropertyType.Name);
+            ////Title
+            //SeleniumSetMethods.SelectDropDown("TitleId", "Mr.", PropertyType.Id);
+
+            ////Initial
+            //SeleniumSetMethods.EnterText("Initial", "namename", PropertyType.Name);
+
+            //Console.WriteLine("Title value is: " + SeleniumGetMethods.GetTextFromDDL("TitleId", PropertyType.Id));
+            //Console.WriteLine("Initial value is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
+
+            ////First name
+            //SeleniumSetMethods.EnterText("FirstName", "John", PropertyType.Name);
+
+            ////Middle name
+            //SeleniumSetMethods.EnterText("MiddleName", "Smith", PropertyType.Name);
+
+            ////Gender
+            //SeleniumSetMethods.Click("Male", PropertyType.Name);
+
+            ////Languages known
+            //SeleniumSetMethods.Click("english", PropertyType.Name); //unchecks
+            //SeleniumSetMethods.Click("Hindi", PropertyType.Name);
+
+
+            ////Save
+            //SeleniumSetMethods.Click("Save", PropertyType.Name);
 
             Thread.Sleep(2000); //pause
 
